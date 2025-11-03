@@ -1,6 +1,5 @@
 package org.FoodDeliveryPlatform.Entity.UserService;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +12,9 @@ import lombok.Data;
 @Table(name = "USER_ROLE")
 public class User_RoleEntity {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @ManyToMany
     @JoinColumn(name = "user_id")
     private UserEntity user;
