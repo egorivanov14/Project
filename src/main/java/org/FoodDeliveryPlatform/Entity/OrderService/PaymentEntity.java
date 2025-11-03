@@ -18,7 +18,7 @@ public class PaymentEntity {
     private Integer id;
 
     @OneToOne
-    @JoinColumn(name = "orderid")
+    @PrimaryKeyJoinColumn(name = "orderid")
     private OrderEntity order;
 
     private String method;
