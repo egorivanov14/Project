@@ -10,11 +10,11 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "RESTAURANT")
+@Table(name = "restaurant")
 public class RestaurantEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     private String name;

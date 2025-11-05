@@ -4,17 +4,16 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "DISH")
+@Table(name = "dish")
 public class DishEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     private String name;
@@ -24,5 +23,5 @@ public class DishEntity {
 
     @ManyToOne
     @JoinColumn(name = "restaurantid")
-    private RestaurantEntity restaurant;
+    private RestaurantEntity restaurantEntity;
 }

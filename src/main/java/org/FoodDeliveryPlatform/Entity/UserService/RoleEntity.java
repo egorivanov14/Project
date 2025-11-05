@@ -3,15 +3,14 @@ package org.FoodDeliveryPlatform.Entity.UserService;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
 @Entity
-@Table(name = "ROLE")
+@Table(name = "roles")
 public class RoleEntity {
 
     @Id
@@ -19,4 +18,7 @@ public class RoleEntity {
     private Integer id;
 
     private String name;
+
+    
+
 }

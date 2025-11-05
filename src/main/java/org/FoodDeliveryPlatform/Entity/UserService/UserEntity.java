@@ -2,18 +2,14 @@ package org.FoodDeliveryPlatform.Entity.UserService;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 
 import java.sql.Timestamp;
 
 
 @Data
-@AllArgsConstructor
-@Builder
 @Entity
-@Table (name = "USER")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
@@ -29,7 +25,5 @@ public class UserEntity {
     private Timestamp created_at;
 
     private Timestamp updated_at;
-
-
 
 }

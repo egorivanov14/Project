@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.FoodDeliveryPlatform.Entity.RestaurantService.DishEntity;
 
 @Data
@@ -16,16 +15,16 @@ import org.FoodDeliveryPlatform.Entity.RestaurantService.DishEntity;
 public class OrderItemEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "orderid")
-    private OrderEntity order;
+    private OrderEntity orderEntity;
 
     @OneToOne
     @JoinColumn(name = "dishid")
-    private DishEntity dish;
+    private DishEntity dishEntity;
 
     private Integer quantity;
     private Integer price;

@@ -9,7 +9,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "USER_ROLE")
+@Table(name = "users_role")
 public class User_RoleEntity {
 
 
@@ -17,11 +17,11 @@ public class User_RoleEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private UserEntity user;
+    private UserEntity userEntity;
 
 
     @OneToOne
     @JoinColumn(name = "role_id")
-    private RoleEntity role;
+    private RoleEntity roleEntity;
 
 }

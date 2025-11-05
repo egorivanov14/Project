@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "ORDER")
+@Table(name = "ORDERS")
 public class OrderEntity {
 
     @Id
@@ -28,12 +28,11 @@ public class OrderEntity {
 
     @ManyToOne
     @JoinColumn(name = "userid")
-    private UserEntity user;
+    private UserEntity userEntity;
 
     @ManyToOne
     @JoinColumn(name = "restaurantid")
-    private RestaurantEntity restaurant;
+    private RestaurantEntity restaurantEntity;
 
     private Integer totalPrice;
-
 }

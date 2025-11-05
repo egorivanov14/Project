@@ -14,12 +14,12 @@ import lombok.NoArgsConstructor;
 public class PaymentEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     @OneToOne
     @PrimaryKeyJoinColumn(name = "orderid")
-    private OrderEntity order;
+    private OrderEntity orderEntity;
 
     private String method;
     private Integer amount;

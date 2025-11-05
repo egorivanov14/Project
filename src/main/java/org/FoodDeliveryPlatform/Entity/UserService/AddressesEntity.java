@@ -5,14 +5,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 
 @Data
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "ADDRESSES")
+@Table(name = "address")
 public class AddressesEntity {
 
     @Id
@@ -27,6 +26,6 @@ public class AddressesEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private UserEntity user;
+    private UserEntity userEntity;
 
 }
